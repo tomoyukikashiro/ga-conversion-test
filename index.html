@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <ol>
+    <li><button type='button' onclick="onClick(1)">step1</button></li>
+    <li><button type='button' onclick="onClick(2)">step2</button></li>
+    <li><button type='button' onclick="onClick(3)">step3</button></li>
+    <li><button type='button' onclick="onClick(4)">step4</button></li>
+  </ol>
+  <script>
+    function onClick(id) {
+      ga('send', 'pageview', `page-${id}`);
+      ga('send', 'pageview', `with-param-page-${id}?store=test`);
+    }
+  </script>
+</body>
+</html>
